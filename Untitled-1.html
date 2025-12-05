@@ -1,0 +1,703 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ringkasan Materi Kisi-Kisi Fisika Kelas X - Lengkap</title>
+    <style>
+        body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; line-height: 1.6; margin: 20px; color: #333; }
+        
+        .header-container {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .header-image {
+            flex-shrink: 0;
+        }
+        
+        .header-image img {
+            width: 150px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        h1 { color: #2C3E50; border-bottom: 3px solid #ed00ba; padding-bottom: 5px; }
+        h3 { color: #34495E; border-left: 5px solid #ff00a2; padding-left: 10px; margin-top: 25px; }
+        h4 { color: #b929af; margin-top: 15px; }
+        table { width: 100%; border-collapse: collapse; margin: 15px 0; font-size: 0.95em; }
+        th, td { border: 1px solid #ff82da; padding: 12px; text-align: left; vertical-align: top; }
+        th { background-color: #ffc0e8; color: #2C3E50; font-weight: bold; text-align: center; }
+        .formula { font-style: italic; font-weight: bold; margin: 10px 0; padding: 8px; background-color: #fac0ff; border: 1px dashed #BDC3C7; text-align: center; }
+        .image-placeholder { border: 2px dashed #E74C3C; padding: 15px; margin: 15px 0; text-align: center; color: #C0392B; background-color: #FADBD8; font-style: italic; }
+        ul, ol { padding-left: 20px; }
+        
+        /* Simulasi Gaya */
+        .simulator-container {
+            background: linear-gradient(135deg, #05599a 0%, #004d6e 100%);
+            border-radius: 15px;
+            padding: 30px;
+            margin: 30px 0;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            color: white;
+        }
+        
+        .simulator-title {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-align: center;
+        }
+        
+                .simulator-header {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .simulator-header-image {
+            flex-shrink: 0;
+        }
+        
+        .simulator-header-image img {
+            width: 120px;
+            height: 120px;
+            object-fit: cover;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+            border: 3px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        .simulator-header-title {
+            flex: 1;
+        }
+
+        .simulator-controls {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .control-group {
+            margin-bottom: 15px;
+        }
+        
+        .control-label {
+            display: inline-block;
+            width: 150px;
+            font-weight: bold;
+        }
+        
+        .control-input {
+            width: 200px;
+            padding: 8px;
+            border: none;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+        
+        .control-value {
+            display: inline-block;
+            width: 100px;
+            margin-left: 10px;
+            font-weight: bold;
+        }
+        
+        .btn-group {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        
+        .btn {
+            background: #ff006e;
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            margin: 5px;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .btn:hover {
+            background: #d90368;
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(255, 0, 110, 0.4);
+        }
+        
+        .btn-secondary {
+            background: #00d4ff;
+            color: #333;
+        }
+        
+        .btn-secondary:hover {
+            background: #00a8cc;
+        }
+        
+        .btn-success {
+            background: #ff00dd;
+            color: #333;
+        }
+        
+        .btn-success:hover {
+            background: #ff05d5;
+        }
+        
+        .canvas-container {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 20px;
+            box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.1);
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+        }
+        
+        canvas {
+            border: 2px solid #ddd;
+            border-radius: 5px;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        .info-box {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #ff006e;
+        }
+        
+        .info-text {
+            font-size: 14px;
+            line-height: 1.6;
+        }
+        
+        .result-text {
+            font-size: 16px;
+            font-weight: bold;
+            margin-top: 10px;
+            color: #ffffff;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="header-container">
+        <div class="header-image">
+            <img src="fisika4.jpg" alt="Fisika">
+        </div>
+        <div>
+            <h1>RINGKASAN MATERI KISI-KISI FISIKA</h1>
+        </div>
+    </div>
+    <hr>
+
+    <h3>1. ALAT UKUR DAN KETIDAKPASTIAN (Soal 1-12)</h3>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>No. Soal</th>
+                <th>Level Kognitif</th>
+                <th>Indikator Utama</th>
+                <th>Konsep Kunci</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>1-3, 9, 12</strong></td>
+                <td>L1</td>
+                <td>Menentukan Nilai Skala Terkecil (<strong>NST</strong>) dan <strong>Ketidakpastian Mutlak (&#916;x)</strong></td>
+                <td>
+                    <strong>Rumus:</strong> &#916;x = (1/2) &times; NST. NST adalah batas terkecil yang bisa dibaca alat.<br> 
+                    <strong>Contoh:</strong> Mikrometer Sekrup memiliki NST 0,01 mm, sehingga &#916;x = 0,005 mm.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>4-7, 10</strong></td>
+                <td>L1</td>
+                <td>Menentukan <strong>Hasil Pengukuran</strong> Jangka Sorong, Mikrometer Sekrup, atau Neraca</td>
+                <td>
+                    <strong>Jangka Sorong:</strong> Hasil = Skala Utama + (Skala Nonius &times; NST 0,01 cm).
+                    <img src="fisika1.jpg" 
+                         alt="Cara membaca Jangka Sorong"
+                         style="max-width: 100%;height:auto;">
+                    <img src="fisika2.jpg" 
+                         alt="Cara membaca Jangka Sorong"
+                         style="max-width: 100%;height:auto;">
+                </td>
+            </tr>
+            <tr>
+                <td><strong>8, 11</strong></td>
+                <td>L2</td>
+                <td>Menentukan <strong>Pernyataan Tepat</strong> terkait presisi dan hasil pengukuran</td>
+                <td>
+                    <strong>Presisi</strong> (Ketelitian) diukur dari NST terkecil. Mikrometer Sekrup &gt; Jangka Sorong &gt; Mistar.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <h3>2. KETIDAKPASTIAN RELATIF DAN ANGKA PENTING (Soal 13-20)</h3>
+    
+    <table>
+        <thead>
+            <tr>
+                <th>No. Soal</th>
+                <th>Level Kognitif</th>
+                <th>Indikator Utama</th>
+                <th>Konsep Kunci</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>13, 14, 15</strong></td>
+                <td>L2</td>
+                <td>Menentukan besar <strong>Ketidakpastian Relatif (KR)</strong></td>
+                <td>
+                    <strong>Rumus:</strong>
+                    <div class="formula">
+                        KR = (&#916;x / Hasil Pengukuran) &times; 100%
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>16-20</strong></td>
+                <td>L1/L2</td>
+                <td>Menentukan <strong>AP</strong>, <strong>Pembulatan</strong>, dan <strong>Operasi Hitung</strong></td>
+                <td>
+                    Konsep inti dijelaskan pada sub-bagian di bawah ini.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h4>Detail Tambahan: Aturan Angka Penting (AP)</h4>
+    <ol>
+        <li><strong>Penentuan AP:</strong>
+            <ul>
+                <li>Semua angka <strong>bukan nol</strong> adalah AP (Cth: 123 &rarr; 3 AP).</li>
+                <li>Angka nol yang berada <strong>di antara</strong> angka bukan nol adalah AP (Cth: 1005 &rarr; 4 AP).</li>
+                <li>Angka nol yang berada di sebelah kanan angka bukan nol dan di <strong>belakang koma desimal</strong> adalah AP (Cth: 1,20 &rarr; 3 AP).</li>
+                <li>Angka nol di depan angka bukan nol (nol sebelum AP pertama) <strong>BUKAN AP</strong> (Cth: 0,0045 &rarr; 2 AP).</li>
+            </ul>
+        </li>
+        <li><strong>Pembulatan:</strong>
+            <ul>
+                <li>Jika angka yang dihilangkan &#x2265; 5, angka sebelumnya dibulatkan ke atas (Cth: 12,7 dibulatkan ke 2 AP &rarr; 13).</li>
+                <li>Jika angka yang dihilangkan &lt; 5, angka sebelumnya tetap (Cth: 12,4 dibulatkan ke 2 AP &rarr; 12).</li>
+            </ul>
+        </li>
+        <li><strong>Operasi Hitung AP:</strong>
+            <ul>
+                <li><strong>Penjumlahan/Pengurangan:</strong> Hasil mengikuti jumlah <strong>angka desimal</strong> paling sedikit.</li>
+                <li><strong>Perkalian/Pembagian:</strong> Hasil mengikuti jumlah <strong>Angka Penting</strong> paling sedikit.</li>
+            </ul>
+        </li>
+    </ol>
+
+    <hr>
+
+    <h3>3. GERAK LURUS BERATURAN (GLB) DAN BERUBAH BERATURAN (GLBB) (Soal 21-30)</h3>
+
+    <table>
+        <thead>
+            <tr>
+                <th>No. Soal</th>
+                <th>Level Kognitif</th>
+                <th>Gerak/Indikator Utama</th>
+                <th>Konsep Kunci</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>21, 22 (GLB)</strong></td>
+                <td>L2</td>
+                <td>Menentukan <strong>grafik v-t dan x-t</strong> yang tepat</td>
+                <td>
+                    <strong>Ciri GLB:</strong> Kecepatan (v) konstan, a=0.<br>
+                    <strong>Grafik v-t:</strong> Garis horizontal.<br>
+                    <strong>Grafik x-t:</strong> Garis lurus miring ke atas.
+                </td>
+            </tr>
+            <tr>
+                <td><strong>23 (GLB)</strong></td>
+                <td>L1</td>
+                <td>Menentukan besar <strong>kecepatan rata-rata</strong></td>
+                <td>
+                    <strong>Rumus:</strong>
+                    <div class="formula">
+                        v̄ = Δx / Δt
+                    </div>
+                </td>
+            </tr>
+            <tr>
+                <td><strong>24, 25, 26 (GLBB)</strong></td>
+                <td>L2</td>
+                <td>Menentukan <strong>grafik a-t, v-t, dan x-t</strong> yang tepat</td>
+                <td>
+                    <strong>Ciri GLBB:</strong> a konstan. Dipercepat (↑), Diperlambat (↓).<br>
+                    <img src="fisika3.jpg" 
+                         alt="Grafik GLBB" 
+                         style="max-width: 100%;height: auto;">
+                </td>
+            </tr>
+            <tr>
+                <td><strong>27, 28, 29 (GLBB)</strong></td>
+                <td>L1/L2</td>
+                <td>Menentukan v<sub>t</sub>, Jarak (Δx), dan v<sub>0</sub></td>
+                <td>
+                    <strong>Rumus Kunci:</strong><br>
+                    1. v<sub>t</sub> = v<sub>0</sub> + a t (L1)<br>
+                    2. Δx = v<sub>0</sub> t + (1/2) a t²<br>
+                    3. v<sub>t</sub>² = v<sub>0</sub>² + 2 a Δx (L2)
+                </td>
+            </tr>
+            <tr>
+                <td><strong>30 (Perbandingan)</strong></td>
+                <td>L2</td>
+                <td>Menentukan <strong>perbandingan grafik v-t</strong> antara GLB dan GLBB</td>
+                <td>
+                    <strong>GLB:</strong> Garis horizontal konstan. <strong>GLBB:</strong> Garis miring.
+                </td>
+            </tr>
+        </tbody>
+    </table>
+
+    <hr>
+
+    <!-- SIMULASI GAME GRAFIK GERAK LURUS -->
+    <div class="simulator-container">
+        <div class="simulator-header">
+    <div class="simulator-header-image">
+        <img src="fisika5.jpg" alt="Simulasi Gerak Lurus">
+    </div>
+    <div class="simulator-header-title">
+        <div class="simulator-title"> SIMULASI GRAFIK GERAK LURUS</div>
+    </div>
+    </div>
+        
+        <div class="info-box">
+            <div class="info-text">
+                <strong>Instruksi:</strong> Pilih jenis gerak, atur parameter (kecepatan awal, percepatan, waktu), 
+                dan simulasikan untuk melihat grafik v-t, x-t, dan visualisasi gerak benda!
+            </div>
+        </div>
+
+        <div class="simulator-controls">
+            <div class="control-group">
+                <label class="control-label"><strong>Jenis Gerak:</strong></label>
+                <select id="motionType" class="control-input" onchange="updateSimulation()">
+                    <option value="glb">GLB (Gerak Lurus Beraturan)</option>
+                    <option value="glbb-percepat">GLBB Dipercepat</option>
+                    <option value="glbb-perlambat">GLBB Diperlambat</option>
+                </select>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label"><strong>Kecepatan Awal (m/s):</strong></label>
+                <input type="range" id="v0" class="control-input" min="0" max="20" value="5" step="0.5" oninput="updateValues()">
+                <span class="control-value" id="v0-value">5 m/s</span>
+            </div>
+
+            <div class="control-group" id="accelGroup" style="display:none;">
+                <label class="control-label"><strong>Percepatan (m/s²):</strong></label>
+                <input type="range" id="acceleration" class="control-input" min="-5" max="5" value="2" step="0.5" oninput="updateValues()">
+                <span class="control-value" id="accel-value">2 m/s²</span>
+            </div>
+
+            <div class="control-group">
+                <label class="control-label"><strong>Waktu Total (s):</strong></label>
+                <input type="range" id="time" class="control-input" min="1" max="20" value="10" step="1" oninput="updateValues()">
+                <span class="control-value" id="time-value">10 s</span>
+            </div>
+        </div>
+
+        <div class="btn-group">
+            <button class="btn btn-success" onclick="startAnimation()">▶ Mulai Simulasi</button>
+            <button class="btn btn-secondary" onclick="resetSimulation()">⟲ Reset</button>
+        </div>
+
+        <div class="canvas-container">
+            <div style="flex: 1; min-width: 300px;">
+                <canvas id="graphVT" width="400" height="300"></canvas>
+                <div style="text-align: center; font-weight: bold; color: #333; margin-top: 10px;">Grafik Kecepatan-Waktu (v-t)</div>
+            </div>
+            <div style="flex: 1; min-width: 300px;">
+                <canvas id="graphXT" width="400" height="300"></canvas>
+                <div style="text-align: center; font-weight: bold; color: #333; margin-top: 10px;">Grafik Posisi-Waktu (x-t)</div>
+            </div>
+        </div>
+
+        <div class="canvas-container">
+            <div style="width: 100%; min-width: 300px;">
+                <canvas id="motionPath" width="600" height="150"></canvas>
+                <div style="text-align: center; font-weight: bold; color: #333; margin-top: 10px;">Visualisasi Gerak Benda</div>
+            </div>
+        </div>
+
+        <div class="info-box">
+            <div class="result-text" id="resultInfo"></div>
+        </div>
+    </div>
+
+    <script>
+        let simulationData = {
+            motionType: 'glb',
+            v0: 5,
+            acceleration: 0,
+            time: 10,
+            isAnimating: false
+        };
+
+        function updateValues() {
+            simulationData.v0 = parseFloat(document.getElementById('v0').value);
+            simulationData.acceleration = parseFloat(document.getElementById('acceleration').value);
+            simulationData.time = parseFloat(document.getElementById('time').value);
+
+            document.getElementById('v0-value').textContent = simulationData.v0 + ' m/s';
+            document.getElementById('accel-value').textContent = simulationData.acceleration + ' m/s²';
+            document.getElementById('time-value').textContent = simulationData.time + ' s';
+
+            updateSimulation();
+        }
+
+        function updateSimulation() {
+            const motionType = document.getElementById('motionType').value;
+            simulationData.motionType = motionType;
+
+            const accelGroup = document.getElementById('accelGroup');
+            if (motionType === 'glb') {
+                accelGroup.style.display = 'none';
+                simulationData.acceleration = 0;
+            } else {
+                accelGroup.style.display = 'block';
+                if (motionType === 'glbb-perlambat') {
+                    document.getElementById('acceleration').max = '0';
+                    if (simulationData.acceleration > 0) {
+                        simulationData.acceleration = -2;
+                        document.getElementById('acceleration').value = -2;
+                        document.getElementById('accel-value').textContent = '-2 m/s²';
+                    }
+                } else {
+                    document.getElementById('acceleration').max = '5';
+                }
+            }
+
+            drawGraphs();
+        }
+
+        function drawGraphs() {
+            const v0 = simulationData.v0;
+            const a = simulationData.acceleration;
+            const t_total = simulationData.time;
+
+            // Canvas dan context
+            const canvasVT = document.getElementById('graphVT');
+            const ctxVT = canvasVT.getContext('2d');
+            const canvasXT = document.getElementById('graphXT');
+            const ctxXT = canvasXT.getContext('2d');
+            const canvasMotion = document.getElementById('motionPath');
+            const ctxMotion = canvasMotion.getContext('2d');
+
+            // Clear canvases
+            ctxVT.fillStyle = '#fff';
+            ctxVT.fillRect(0, 0, canvasVT.width, canvasVT.height);
+            ctxXT.fillStyle = '#fff';
+            ctxXT.fillRect(0, 0, canvasXT.width, canvasXT.height);
+            ctxMotion.fillStyle = '#fff';
+            ctxMotion.fillRect(0, 0, canvasMotion.width, canvasMotion.height);
+
+            // Draw grid dan axis
+            drawAxes(ctxVT, canvasVT, 'Waktu (s)', 'Kecepatan (m/s)');
+            drawAxes(ctxXT, canvasXT, 'Waktu (s)', 'Posisi (m)');
+
+            // Draw curves
+            const maxV = v0 + (a * t_total);
+            const maxX = v0 * t_total + 0.5 * a * t_total * t_total;
+
+            // Scale factors
+            const scaleT_VT = (canvasVT.width - 50) / t_total;
+            const scaleV = (canvasVT.height - 60) / Math.max(maxV, v0, 1);
+            const scaleT_XT = (canvasXT.width - 50) / t_total;
+            const scaleX = (canvasXT.height - 60) / Math.max(maxX, 1);
+
+            // Draw v-t curve
+            ctxVT.strokeStyle = '#ff006e';
+            ctxVT.lineWidth = 3;
+            ctxVT.beginPath();
+            for (let t = 0; t <= t_total; t += 0.1) {
+                const v = v0 + a * t;
+                const x = 40 + t * scaleT_VT;
+                const y = canvasVT.height - 30 - v * scaleV;
+                if (t === 0) ctxVT.moveTo(x, y);
+                else ctxVT.lineTo(x, y);
+            }
+            ctxVT.stroke();
+
+            // Draw x-t curve
+            ctxXT.strokeStyle = '#00d4ff';
+            ctxXT.lineWidth = 3;
+            ctxXT.beginPath();
+            for (let t = 0; t <= t_total; t += 0.1) {
+                const x = v0 * t + 0.5 * a * t * t;
+                const px = 40 + t * scaleT_XT;
+                const py = canvasXT.height - 30 - x * scaleX;
+                if (t === 0) ctxXT.moveTo(px, py);
+                else ctxXT.lineTo(px, py);
+            }
+            ctxXT.stroke();
+
+            // Draw motion visualization
+            drawMotionVisualization(ctxMotion, canvasMotion, v0, a, t_total);
+
+            // Update result info
+            updateResultInfo(v0, a, t_total, maxV, maxX);
+        }
+
+        function drawAxes(ctx, canvas, xLabel, yLabel) {
+            ctx.strokeStyle = '#333';
+            ctx.lineWidth = 2;
+            ctx.font = '12px Arial';
+            ctx.fillStyle = '#333';
+
+            // X axis
+            ctx.beginPath();
+            ctx.moveTo(40, canvas.height - 30);
+            ctx.lineTo(canvas.width - 10, canvas.height - 30);
+            ctx.stroke();
+
+            // Y axis
+            ctx.beginPath();
+            ctx.moveTo(40, 10);
+            ctx.lineTo(40, canvas.height - 30);
+            ctx.stroke();
+
+            // Labels
+            ctx.textAlign = 'center';
+            ctx.fillText(xLabel, canvas.width / 2, canvas.height - 5);
+            ctx.save();
+            ctx.translate(15, canvas.height / 2);
+            ctx.rotate(-Math.PI / 2);
+            ctx.fillText(yLabel, 0, 0);
+            ctx.restore();
+
+            // Grid
+            ctx.strokeStyle = '#eee';
+            ctx.lineWidth = 1;
+            for (let i = 0; i <= 10; i++) {
+                const x = 40 + (canvas.width - 50) / 10 * i;
+                const y = canvas.height - 30 - (canvas.height - 40) / 10 * i;
+                ctx.beginPath();
+                ctx.moveTo(x, canvas.height - 30);
+                ctx.lineTo(x, canvas.height - 35);
+                ctx.stroke();
+                ctx.beginPath();
+                ctx.moveTo(40, y);
+                ctx.lineTo(35, y);
+                ctx.stroke();
+            }
+        }
+
+        function drawMotionVisualization(ctx, canvas, v0, a, t_total) {
+            const yCenter = canvas.height / 2;
+            const startX = 50;
+            const endX = canvas.width - 50;
+
+            // Draw road
+            ctx.strokeStyle = '#999';
+            ctx.lineWidth = 2;
+            ctx.setLineDash([5, 5]);
+            ctx.beginPath();
+            ctx.moveTo(startX, yCenter + 15);
+            ctx.lineTo(endX, yCenter + 15);
+            ctx.stroke();
+            ctx.setLineDash([]);
+
+            // Draw positions
+            const positions = [0, t_total / 4, t_total / 2, 3 * t_total / 4, t_total];
+            const maxDist = v0 * t_total + 0.5 * a * t_total * t_total;
+
+            positions.forEach((t, index) => {
+                const dist = v0 * t + 0.5 * a * t * t;
+                const x = startX + (endX - startX) * dist / maxDist;
+                const colors = ['#ff006e', '#ff00a2', '#ff6ec4', '#ffc0e8', '#00ff88'];
+                
+                ctx.fillStyle = colors[index];
+                ctx.beginPath();
+                ctx.arc(x, yCenter, 8, 0, 2 * Math.PI);
+                ctx.fill();
+                
+                ctx.fillStyle = '#333';
+                ctx.font = '10px Arial';
+                ctx.textAlign = 'center';
+                ctx.fillText(`t=${t.toFixed(1)}s`, x, yCenter + 25);
+            });
+        }
+
+        function updateResultInfo(v0, a, t, vt, xt) {
+            const motionType = simulationData.motionType;
+            let info = '';
+
+            if (motionType === 'glb') {
+                info = `<strong>GLB (Gerak Lurus Beraturan)</strong><br>`;
+                info += `• Kecepatan awal (v₀) = ${v0} m/s<br>`;
+                info += `• Percepatan (a) = 0 m/s²<br>`;
+                info += `• Kecepatan akhir (vₜ) = ${vt.toFixed(2)} m/s<br>`;
+                info += `• Jarak tempuh = ${xt.toFixed(2)} m<br>`;
+                info += `✓ Kecepatan konstan, grafik v-t horizontal`;
+            } else if (motionType === 'glbb-percepat') {
+                info = `<strong>GLBB Dipercepat</strong><br>`;
+                info += `• Kecepatan awal (v₀) = ${v0} m/s<br>`;
+                info += `• Percepatan (a) = ${a} m/s²<br>`;
+                info += `• Kecepatan akhir (vₜ) = ${vt.toFixed(2)} m/s<br>`;
+                info += `• Jarak tempuh = ${xt.toFixed(2)} m<br>`;
+                info += `✓ Kecepatan bertambah, grafik v-t miring naik`;
+            } else {
+                info = `<strong>GLBB Diperlambat</strong><br>`;
+                info += `• Kecepatan awal (v₀) = ${v0} m/s<br>`;
+                info += `• Percepatan (a) = ${a} m/s²<br>`;
+                info += `• Kecepatan akhir (vₜ) = ${Math.max(0, vt).toFixed(2)} m/s<br>`;
+                info += `• Jarak tempuh = ${xt.toFixed(2)} m<br>`;
+                info += `✓ Kecepatan berkurang, grafik v-t miring turun`;
+            }
+
+            document.getElementById('resultInfo').innerHTML = info;
+        }
+
+        function startAnimation() {
+            if (!simulationData.isAnimating) {
+                simulationData.isAnimating = true;
+                drawGraphs();
+            }
+        }
+
+        function resetSimulation() {
+            simulationData.isAnimating = false;
+            document.getElementById('motionType').value = 'glb';
+            document.getElementById('v0').value = 5;
+            document.getElementById('acceleration').value = 2;
+            document.getElementById('time').value = 10;
+            updateValues();
+        }
+
+        // Initial draw
+        updateSimulation();
+    </script>
+
+</body>
+</html>
